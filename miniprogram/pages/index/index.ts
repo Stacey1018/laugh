@@ -42,6 +42,18 @@ Page({
         },
       })
     }
+    this.getUser()
+  },
+  getUser(){
+    wx.request({
+      url:'https://144.34.177.82:3000/users/getUser',
+      data:{ username:'zy'},
+      method:"POST",
+      complete: function(res){
+        console.log(res)
+      }
+    },
+    )
   },
   getUserInfo(e: any) {
     console.log(e)
