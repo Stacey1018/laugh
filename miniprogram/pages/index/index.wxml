@@ -1,25 +1,10 @@
 <!--index.wxml-->
 <view class="container">
-  <view>
-  这是一条笑话
-  </view>
-  <van-button type="primary">换一个</van-button>
-
-  <!-- <view class="page-section-spacing">
-        <scroll-view class="scroll-view_H" scroll-x="true" bindscroll="scroll" style="width: 100%">
-          <view id="demo1" class="scroll-view-item_H demo-text-1">q</view>
-          <view id="demo2"  class="scroll-view-item_H demo-text-2">d</view>
-          <view id="demo3" class="scroll-view-item_H demo-text-3">5</view>
-        </scroll-view>
-  </view> -->
-  <!-- <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view> -->
+	<swiper class="container-swiper">
+		<block wx:for="{{background}}" wx:key="*this">
+			<swiper-item>
+				<view class="swiper-item {{item}}">dfasd</view>
+			</swiper-item>
+		</block>
+	</swiper>
 </view>

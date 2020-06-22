@@ -6,6 +6,7 @@ Page({
         userInfo: {},
         hasUserInfo: false,
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
+        background: ['demo-text-1', 'demo-text-2', 'demo-text-3'],
     },
     bindViewTap: function () {
         wx.navigateTo({
@@ -43,11 +44,12 @@ Page({
     },
     getUser: function () {
         wx.request({
-            url: 'https://144.34.177.82:3000/users/getUser',
-            data: { username: 'zy' },
-            method: "POST",
+            url: 'http://localhost:3000/',
+            data: { username: 'zy' }, 
+            method: "GET",
             complete: function (res) {
                 console.log(res);
+              
             }
         });
     },
